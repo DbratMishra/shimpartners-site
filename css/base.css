@@ -1,0 +1,102 @@
+/* ── Reset & Custom Properties ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --navy:        #1A2E4A;
+  --navy-deep:   #0D1E32;
+  --teal:        #0E7B82;
+  --teal-deep:   #0A5F65;
+  --ivory:       #FAFAF7;
+  --silver:      #F0F4F8;
+  --mid:         #64748B;
+  --border:      #E2E8F0;
+  --white:       #FFFFFF;
+
+  --font-display: 'DM Serif Display', serif;
+  --font-body:    'DM Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--ivory);
+  color: var(--mid);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, svg { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+button { font-family: var(--font-body); cursor: pointer; }
+input, textarea { font-family: var(--font-body); }
+
+/* ── Container ── */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container--wide {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container--narrow {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Eyebrow ── */
+.eyebrow {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.eyebrow--teal {
+  color: var(--teal);
+  letter-spacing: 0.14em;
+  margin-bottom: 16px;
+}
+
+.eyebrow--light {
+  color: rgba(255,255,255,0.45);
+  border-left: 2px solid var(--teal);
+  padding-left: 10px;
+}
+
+.eyebrow--light-alt {
+  color: rgba(255,255,255,0.45);
+  border-left: 2px solid rgba(255,255,255,0.4);
+  padding-left: 10px;
+}
+
+/* ── Typography ── */
+h1, h2 {
+  font-family: var(--font-display);
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(28px, 3.5vw, 44px); line-height: 1.15; }
+h2 { font-size: clamp(24px, 2.8vw, 38px); }
+
+/* ── Link styles ── */
+.link-teal {
+  color: var(--teal);
+  font-weight: 500;
+  font-size: 14px;
+  display: inline-block;
+}
+.link-teal:hover { text-decoration: underline; }
